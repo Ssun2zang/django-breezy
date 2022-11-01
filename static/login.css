@@ -1,0 +1,124 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+
+    position: relative;
+    width: 1440px;
+    height: 1900px;
+
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+
+.login{
+    position: absolute;
+    width: 300px;
+    height: 153px;
+    left: 575px;
+    top: 400px;
+}
+
+
+
+.loginbot{
+    width: 276px
+}
+
+.rec1{
+    position: absolute;
+    width: 374px;
+    height: 553px;
+    left: 533px;
+    top: 160px;
+
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rec2{
+    position: absolute;
+    width: 374px;
+    height: 680px;
+    left: 533px;
+    top: 160px;
+
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logtitle{
+    position: absolute;
+    width: 120px;
+    height: 44px;
+    left: 570px;
+    top: 410px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #151515;
+
+    opacity: 0.9;
+}
+
+.regtitle{
+    position: absolute;
+    width: 200px;
+    height: 44px;
+    left: 550px;
+    top: 410px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #151515;
+
+    opacity: 0.9;
+}
+
+.line1{
+    position: absolute;
+    width: 1170px;
+    height: 0px;
+    top: 120px;
+    left: 135px;
+
+    border: 0.2px solid rgba(99, 99, 99, 0.6);
+}
+
+.loglogo{
+    position: absolute;
+    width: 276px;
+    height: 217px;
+    left: 585px;
+    top: 213px;
+}
+
+.backcau{
+    position: fixed;
+    background-attachment: fixed;
+    /* width: 1438px;
+    height: 1181px; */
+    left: 0px;
+    top: 0px;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    
+}

@@ -1,0 +1,108 @@
+
+{% extends "based.html" %}
+
+{% block contents %}
+<link href="/static/bootstrap.min.css" rel="stylesheet" />
+
+<link rel = "stylesheet" href="/static/brlist.css"/>
+
+
+<div>
+    <a href="#" class="ahome">홈</a>
+    <a href="/users/login/" class="alogin">로그인</a>
+    <a href="/users/logout/" class="alogout">로그아웃</a>
+    <a href="/users/register" class="aregi">회원가입</a>
+</div>
+
+<div>
+    <a href="#">
+        <img src="/static/image/브리지 로고.png"  class="logo">
+    </a>
+    <a href="#" class="bbookmark">즐겨찾기</a>
+    <a href="#" class="buser">사용자정보</a>
+    <a href="#" class="bsaup">사업정보</a>
+    <a href="#" class="bcall">상담센터</a>
+    <a href="#" class="bsite">주요사이트</a>
+</div>
+
+<div class="mainimage">
+    <img src="/static/image/자넷 이미지.png"  class="janetimg">
+    <img src="/static/image/그라데이션.png"  class="gradation">
+</div>
+
+<div class="menu">
+    <a href="#" class="sys1">교량 변위 측정 시스템</a>
+    <a href="/bridges/list/" class="sys2">진동 사용성 평가 시스템</a>
+    <a href="#" class="sys3">받침부 상태 평가 시스템</a>
+</div>
+
+<div class="line"></div>
+<div class="smalltitle">진동 사용성 평가 시스템</div>
+
+<img src="/static/image/Line 1.png"  class="line1">
+
+        <div class="reportdown">
+            <h4>
+            보고서 내려받기
+            </h4>
+        </div>  
+            <form method="get" action="/static/차트만 만드는 폴더/chart/{{BRID}}/output.docx">
+            <button type="submit" class = "btn btn-primary downbut">Download!</button>
+            
+            </form>
+
+        <div class="table spottable">
+            
+            <table border="" class = "table-default table">
+                <th>시간</th>
+                <th>진동수</th>
+                <th>peak</th>
+                <th>등급</th>
+                {% for spot in spotlist %}
+                <tr>
+                    <td>{{spot.0}}</td>
+                    <td>{{spot.1}}</td>
+                    <td>{{spot.2}}</td>
+                    <td>{{spot.3}}</td>
+                  </tr>
+                  {%endfor%}
+                </table>
+        <div class="pages">
+            <ul class="pagination justify-content-center">
+                {% if spotlist.has_previous %}
+                    <li class="page-item ">
+                            <a href="?p={{spotlist.previous_page_number}}" class="page-link">이전으로</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a href="#" class="page-link">이전으로</a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item active">
+                    <a href="#" class="page-link">{{spotlist.number}}/{{spotlist.paginator.num_pages}}</a>
+                </li>
+                {% if spotlist.has_next %}
+                    <li class="page-item">
+                        <a href="?p={{ spotlist.next_page_number }}" class="page-link">다음으로</a>
+                    </li>
+
+                {%else%}
+                    <li class="page-item disabled">
+                        <a href="#" class="page-link">다음으로</a>
+                    </li>
+                    
+
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+
+            <img src="/static/차트만 만드는 폴더/chart/{{BRID}}/totalpicture.png" alt="My Image" class = "totalpic">
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

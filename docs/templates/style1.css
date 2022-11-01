@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.dz{
+    /* border:dashed !important; */
+    border-color: #ccc;
+    border-radius: 10px;
+    position: absolute;
+    width: 1139px;
+    height: 451px;
+    left: 150px;
+    top: 1073px;
+}
+
+.dz:hover{
+    background-color: aliceblue !important;
+}

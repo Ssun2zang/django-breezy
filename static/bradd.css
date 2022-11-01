@@ -1,0 +1,71 @@
+.small-title{
+    
+    position: absolute;
+    height: 24px;
+    left: 665px;
+    right: 665px;
+    top: 1031px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #000000;
+    
+    opacity: 0.7;
+}
+
+.line1{
+    position: absolute;
+    width: 1170px;
+    height: 0px;
+    left: 135px;
+    top: 980px;
+
+border: 0.2px solid rgba(99, 99, 99, 0.6);
+}
+
+.brnameadd{
+    position: absolute;
+    width: 402px;
+    height: 49px;
+    left: 519px;
+    top: 1076px;
+}
+
+.brlengadd{
+    
+    position: absolute;
+    width: 402px;
+    height: 49px;
+    left: 519px;
+    top: 1163px;
+}
+
+.sectionadd{
+    position: absolute;
+    width: 402px;
+    height: 49px;
+    left: 519px;
+    top: 1250px;
+}
+
+.add{
+    position: absolute;
+    width: 122px;
+    height: 49px;
+    left: 659px;
+    top: 1351px;
+}
+
+.back{
+    position: absolute;
+    width: 122px;
+    height: 35px;
+    left: 1183px;
+    top: 930px;
+}

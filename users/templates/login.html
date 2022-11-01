@@ -1,0 +1,46 @@
+{% extends 'based.html' %}
+{% comment %} 상속을 받겠다 {% endcomment %}
+
+{% block contents %}
+
+<link rel = "stylesheet" href="/static/login.css"/>
+
+
+
+<img src="/static/image/빌딩.jpg"  class="backcau">
+
+<div class="rec1"></div>
+<div class="logtitle">로그인</div>
+
+<img src="/static/image/브리지 로고.png"  class="loglogo">
+
+<div class="row mt-5">
+    <div class="col-12">
+        {{ error }}
+    </div>
+</div>
+<div class="row mt-5 login">
+    <div class="col-12">
+        <form method="POST" action".">  
+            {% comment %} 현재 페이지에 포스트 요청 아래 쓴 건 장고쓸 때 꼭 form 안에 써야하는 거{% endcomment %}
+            {% csrf_token %}
+
+            {% for field in form%}
+            <div class="form-group">
+                <!-- <label for="{{field.id_for_laber}}">{{field.label}}</label>
+                 -->
+                <div> &nbsp</div>
+                <input type="{{field.field.widget.input_type}}" class="form-control" 
+                id="{{field.id_for_laber}}" placeholder="{{field.label}}" name="{{field.name}}"/>
+            </div>
+            {% if field.errors %}
+            <span style="color: red">{{field.errors}}</span>
+            {% endif %}
+
+            {% endfor %}
+            <div> &nbsp</div>
+            <button type="submit" class="btn btn-primary loginbot">로그인</button>
+            </form>
+    </div>
+</div>
+{% endblock %}

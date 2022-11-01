@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.dz{
+    /* border:dashed !important; */
+    background-color: #f8f8f8;
+    border-color: #ccc;
+    border-radius: 10px;
+    position: absolute;
+    width: 1030px;
+    height: 451px;
+    left: 205px;
+    top: 1073px;
+}
+
+.dz:hover{
+    background-color: aliceblue !important;
+}
+
+.uploadbutton{
+    position: absolute;
+    width: 122px;
+    height: 49px;
+    left: 659px;
+    top: 1581px;
+}
+
+.line1{
+    position: absolute;
+width: 1170px;
+height: 0px;
+left: 135px;
+top: 980px;
+
+border: 0.2px solid rgba(99, 99, 99, 0.6);
+}

@@ -1,0 +1,50 @@
+
+{% extends "based.html" %}
+
+{% block contents %}
+<link href="/static/bootstrap.min.css" rel="stylesheet" />
+
+<link rel = "stylesheet" href="/static/brlist.css"/>
+
+
+<div>
+    <a href="#" class="ahome">홈</a>
+    <a href="/users/login/" class="alogin">로그인</a>
+    <a href="/users/logout/" class="alogout">로그아웃</a>
+    <a href="/users/register" class="aregi">회원가입</a>
+</div>
+
+<div>
+    <a href="#">
+        <img src="/static/image/브리지 로고.png"  class="logo">
+    </a>
+    <a href="#" class="bbookmark">즐겨찾기</a>
+    <a href="#" class="buser">사용자정보</a>
+    <a href="#" class="bsaup">사업정보</a>
+    <a href="#" class="bcall">상담센터</a>
+    <a href="#" class="bsite">주요사이트</a>
+</div>
+
+<div class="mainimage">
+    <img src="/static/image/자넷 이미지.png"  class="janetimg">
+    <img src="/static/image/그라데이션.png"  class="gradation">
+</div>
+
+<div class="menu">
+    <a href="#" class="sys1">교량 변위 측정 시스템</a>
+    <a href="/bridges/list/" class="sys2">진동 사용성 평가 시스템</a>
+    <a href="#" class="sys3">받침부 상태 평가 시스템</a>
+</div>
+
+<div class="line"></div>
+<div class="smalltitle">진동 사용성 평가 시스템</div>
+
+<img src="/static/image/Line 1.png"  class="line1">
+
+
+<div class="backback"></div>
+<!-- <h1>LOADING...</h1> -->
+<div class="complete">메인 화면에서 보고서 확인</div>
+<button type="button" class="makereport btn btn-primary" onClick="location.href='/bridges/list/'">돌아가기</button>
+
+{% endblock %}

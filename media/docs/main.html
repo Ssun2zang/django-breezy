@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+upload now
+{% endblock title %}
+
+{% block content %}
+<form action="upload/" method="POST"
+      class="dropzone dz"
+      id="my-awesome-dropzone">
+      {% csrf_token %}
+       <input type="file" name="file" />
+    </form>
+
+    <button class="btn btn-primary" onclick="location.href=loc">데이터 전송</button>
+
+    <script>
+        const loc = '/board/upload/'+"{{dirrr}}";
+    </script>
+{% endblock content%}

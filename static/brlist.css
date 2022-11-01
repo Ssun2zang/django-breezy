@@ -1,0 +1,442 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+
+    position: relative;
+    width: 1440px;
+    height: 2500px;
+
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.ahome{
+    /* 홈 */
+
+
+    position: absolute;
+    width: 14px;
+    height: 18px;
+    left: 1087px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+
+}
+
+.alogin{
+    /* 로그인 */
+
+
+    position: absolute;
+    width: 50px;
+    height: 18px;
+    left: 1113px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+
+}
+
+.alogout{
+    /* 로그아웃 */
+
+
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    left: 1166px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+}
+
+.aregi{
+        /* 회원가입 */
+
+
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    left: 1233px;
+    top: 23px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+
+}
+
+.logo{
+    position: absolute;
+    width: 157px;
+    height: 101px;
+    left: 161px;
+    top: 30px;
+}
+
+.bbookmark{
+    /* 즐겨찾기 */
+
+
+    position: absolute;
+    width: 65px;
+    height: 18px;
+    left: 336px;
+    top: 66px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+
+}
+
+.buser{
+    /* 사용자정보 */
+
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 426px;
+top: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+
+.badd{
+    position: absolute;
+    width: 122px;
+    height: 35px;
+    left: 1157px;
+    top: 920px;
+}
+
+.bsaup{
+    /* 사업정보 */
+
+
+position: absolute;
+width: 65px;
+height: 18px;
+left: 531px;
+top: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.05em;
+
+color: #000000;
+
+}
+
+.bcall{
+    /* 상담센터 */
+
+
+position: absolute;
+width: 65px;
+height: 18px;
+left: 621px;
+top: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+
+.bsite{
+    /* 주요사이트 */
+
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 711px;
+top: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+
+.janetimg{
+    position: absolute;
+width: 1440px;
+height: 458px;
+left: 0px;
+top: 112px;
+}
+
+.gradation{
+    position: absolute;
+width: 1440px;
+height: 144px;
+left: 0px;
+top: 427px;
+}
+
+.sys1{
+    /* 교량 변위 측정 시스템 */
+
+
+position: absolute;
+width: 260px;
+height: 24px;
+left: 161px;
+top: 623px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #000000;
+
+opacity: 0.5;
+}
+
+.sys2{
+    /* 진동 사용성 평가 시스템 */
+
+
+position: absolute;
+width: 280px;
+height: 24px;
+left: 447px;
+top: 623px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #305983;
+
+opacity: 0.8;
+}
+
+.sys3{
+    /* 받침부 상태 평가 시스템 */
+
+
+position: absolute;
+width: 280px;
+height: 24px;
+left: 747px;
+top: 623px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #000000;
+
+opacity: 0.5;
+}
+
+.line{
+    position: absolute;
+width: 570px;
+height: 0px;
+left: 435px;
+top: 780px;
+
+border: 1px solid #000000;
+}
+
+.smalltitle{
+    position: absolute;
+width: 806px;
+height: 105px;
+left: 317px;
+top: 818px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 36px;
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #151515;
+
+opacity: 0.9;
+}
+
+.listtable{
+    position: absolute;
+    width: 1169px;
+    height: 398px;
+    left: 135px;
+    top: 923px;
+}
+
+.complete{
+    position: absolute;
+    width: 806px;
+    height: 105px;
+    left: 317px;
+    top: 1222px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #151515;
+
+    opacity: 0.9;
+}
+
+.makereport{
+    position: absolute;
+    width: 276px;
+    height: 56px;
+    left: 582px;
+    top: 1270px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+}
+
+.line1{
+    position: absolute;
+    width: 1170px;
+    height: 0px;
+    left: 135px;
+    top: 980px;
+
+    border: 0.2px solid rgba(99, 99, 99, 0.6);
+}
+
+.backback{
+    min-height: 150px;
+    /* border: 2px solid rgba(0,0,0,.3); */
+    background: #F8F8F8;
+    padding: 20px 20px;
+    border-radius: 10px;
+    position: absolute;
+    width: 1139px;
+    height: 451px;
+    left: 150px;
+    top: 1073px;
+}
+
+.totalpic{
+    position: absolute;
+    width: 743px;
+    height: 545px;
+    left: 348px;
+    top: 1037px;
+    border: 2px solid #A6A6A6;
+    border-radius: 16px;
+}
+
+.spottable{
+    position: absolute;
+    width: 743px;
+    height: 320px;
+    left: 348px;
+    top: 1631px;
+}
+
+.reportdown{
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    left: 594.5px;
+    top: 2221px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+.downbut{
+    position: absolute;
+    width: 188px;
+    height: 46px;
+    left: 626px;
+    top: 2265px;
+
+}

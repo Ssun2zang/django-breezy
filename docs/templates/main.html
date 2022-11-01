@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}
+upload now
+{% endblock title %}
+
+{% block content %}
+<link href="/static/bootstrap.min.css" rel="stylesheet" />
+<!-- <style type="text/css">
+    #wrap-loading { /*화면 전체를 어둡게 합니다.*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* display: none; */
+    background: rgba(0,0,0,0.2); /*not in ie */
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000'); /* ie */
+    }
+    
+    .loading { /*로딩 이미지*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    }
+    </style> -->
+
+
+  <!-- <div id="wrap-loading" >
+    <img src="/static/loading.gif" class="loading" style="width:50px;">
+  </div> -->
+
+
+  <link rel = "stylesheet" href="/static/brlist.css"/>
+
+
+  <div>
+      <a href="#" class="ahome">홈</a>
+      <a href="/users/login/" class="alogin">로그인</a>
+      <a href="/users/logout/" class="alogout">로그아웃</a>
+      <a href="/users/register" class="aregi">회원가입</a>
+  </div>
+  
+  <div>
+      <a href="#">
+          <img src="/static/image/브리지 로고.png"  class="logo">
+      </a>
+      <a href="#" class="bbookmark">즐겨찾기</a>
+      <a href="#" class="buser">사용자정보</a>
+      <a href="#" class="bsaup">사업정보</a>
+      <a href="#" class="bcall">상담센터</a>
+      <a href="#" class="bsite">주요사이트</a>
+  </div>
+  
+  <div class="mainimage">
+      <img src="/static/image/자넷 이미지.png"  class="janetimg">
+      <img src="/static/image/그라데이션.png"  class="gradation">
+  </div>
+  
+  <div class="menu">
+      <a href="#" class="sys1">교량 변위 측정 시스템</a>
+      <a href="/bridges/list/" class="sys2">진동 사용성 평가 시스템</a>
+      <a href="#" class="sys3">받침부 상태 평가 시스템</a>
+  </div>
+  
+  <div class="line"></div>
+  <div class="smalltitle">진동 사용성 평가 시스템</div>
+
+  <img src="/static/image/Line 1.png"  class="line1">
+
+
+  <p id style="padding: 20px">
+    <div class="good"></div>
+<form action="upload/" method="POST"
+      class="dz dropzone"
+      id="my-awesome-dropzone">
+      {% csrf_token %}
+       <input type="file" name="file" />
+    </form>
+    <div>
+    &nbsp;
+    </div>
+    <div style=" float:right;">
+    <button class="btn btn-primary uploadbutton"  onclick="location.href=loc">데이터 전송</button>
+    </div>
+    <script>
+        const loc = '/board/upload/'+"{{dirrr}}"+"/"+"{{BRID}}";
+        // Dropzone.autoDiscover = false;
+
+        // const myDropzone = new Dropzone("#my-awesome-dropzone",{
+        //     url: "upload/",
+        //     // maxFiles:2,
+        //     // maxFilesize:2,
+        //     acceptedFiles: '.txt',
+        //     maxFiles: 100,
+        // })
+    </script>
+    <script>
+        window.onload = function(){
+        $('#wrap-loading').hide();
+        }
+        </script>
+{% endblock content%}
