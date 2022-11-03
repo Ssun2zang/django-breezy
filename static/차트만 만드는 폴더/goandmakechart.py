@@ -51,7 +51,7 @@ def do_test(tag):  # tag로 리스트 뽑아옴
 
 def makereport(_document, _list, BRID):
     document = Document(_document) 
-    picname = "C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ '/totalpicture.png'
+    picname = "chart/"+BRID+ '/totalpicture.png'
     document.add_picture(picname,width= Cm(16), height= Cm(9))
 
     table = document.tables[0]  # 표가 1개만 있으니 0번째 표를 대입
@@ -65,7 +65,7 @@ def makereport(_document, _list, BRID):
             table.cell(i+1,j).text = _list[i][j]
             table.rows[i+1].cells[j].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
             # 표에 들어가는 타입은 문자열, 따라서 정수 및 실수는 문자열로 변환
-    report_name = "C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ "/output.docx"
+    report_name = "chart/"+BRID+ "/output.docx"
     document.save(report_name) # 다른 이름으로 저장
 
 
@@ -92,7 +92,7 @@ def makefgraph(acczlist, time, BRID):    ###### 시간을 못찾음
     spot2 = math.sqrt(float(abs(max(Pacc))))  # y축
     
 
-    f = open("C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ '/spot.txt', 'a')
+    f = open("chart/"+BRID+ '/spot.txt', 'a')
     stringgg = new_stamp+ " " + str(round(spot1,2)) + " " + str(round(spot2,2)) + "\n"
     f.write(stringgg)
     print(stringgg)
@@ -151,7 +151,7 @@ def totalgraph(_list1, _list2, BRID):
 
         plt.scatter(a,b,c="red", s = 20)
 
-    f = open("C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ '/spot.txt', 'w')
+    f = open("chart/"+BRID+ '/spot.txt', 'w')
     for stringg in _list2:
         stringgg = "{0} {1} {2} {3} \n".format(stringg[0], stringg[1], stringg[2], stringg[3])
         f.write(stringgg)
@@ -179,7 +179,7 @@ def totalgraph(_list1, _list2, BRID):
     plt.semilogx()
     plt.semilogy()
 
-    picname = "C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ "/totalpicture.png"
+    picname = "chart/"+BRID+ "/totalpicture.png"
 
     plt.savefig(picname)
     # plt.show()
@@ -295,7 +295,7 @@ def datedata(BRID):
 
 
     
-    f = open('C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/'+ BRID+'/spot.txt', 'w')
+    f = open('chart/'+ BRID+'/spot.txt', 'w')
     f.close()
 
     for onelist in _list:
@@ -338,7 +338,7 @@ def main():
         curs.execute(sql)
         row = curs.fetchall() 
         if (row):
-            creatFolder("C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+row[0][3])
+            creatFolder("chart/"+row[0][3])
             datedata(row[0][3])
             curs2 = conn.cursor()
             sql2 = "update report set cur = "+str(1)+" where id = "+str(row[0][0])+";"
