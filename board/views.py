@@ -44,7 +44,7 @@ def _board_upload(request, cookie):  # 안 씀
     curs.execute(sql)
 
     row = curs.fetchall()
-    path = 'C:/Users/heise/Documents/janet_web/mysite/media/'+row[0][0]+'/'
+    path = 'media/'+row[0][0]+'/'
 
     acc1 = []
     acc2 = []
@@ -180,7 +180,8 @@ def board_upload(request, cookie, BRID):
     curs.execute(sql)
 
     row = curs.fetchall()
-    path = 'C:/Users/heise/Documents/janet_web/mysite/media/'+row[0][0]+'/'
+    path = 'media/'+row[0][0]+'/'
+    
 
 
     def upload_rtcdata(ifdb, txtfile, BRID):
@@ -208,7 +209,6 @@ def board_upload(request, cookie, BRID):
         }
         
         json_body = []
-        # print(str(20)+str(txtfile)[2:-4])
         print(str(txtfile))
         
         dt = datetime.strptime(str(20)+str(txtfile)[-18:-6],'%Y%m%d%H%M%S')
@@ -247,9 +247,6 @@ def board_upload(request, cookie, BRID):
                 break
                 
         ifdb.write_points(json_body)
-        # result = ifdb.query('select * from %s' % table_name)
-        # pprint.pprint(result.raw)
-        # print(np)
         
         return 1
     

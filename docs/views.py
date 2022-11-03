@@ -58,7 +58,7 @@ def upload_home(request, BRID):
 
     cookie_dir = rand.replace(':','-',2)
 
-    createFolder('C:/Users/heise/Documents/janet_web/mysite/media/'+cookie_dir)
+    createFolder('media/'+cookie_dir)
 
     conn = pymysql.connect(
                     user='root',
@@ -79,13 +79,13 @@ def upload_home(request, BRID):
     response = render(request, 'main.html', {'dirrr' : key_value, 'BRID' : BRID})
     response.set_cookie('primary_key', key_value, max_age=90)
     
-    DeleteAllFiles("C:/Users/heise/Documents/janet_web/mysite/media/datas") # 시간을 확인하며 새 폴더들을,..
+    DeleteAllFiles("media/datas") # 시간을 확인하며 새 폴더들을,..
 
     return response
 
 def file_upload_view(request, BRID):
     # print(request.FILES)
-    # DeleteAllFiles("C:/Users/heise/Documents/janet_web/mysite/media/datas")
+    # DeleteAllFiles("media/datas")
     cookieee = request.COOKIES.get('primary_key')
     
     if request.method == 'POST':
@@ -107,8 +107,8 @@ def file_upload_view(request, BRID):
 
         row = curs.fetchall()
 
-        source = 'C:/Users/heise/Documents/janet_web/mysite/media/datas/'
-        destination = 'C:/Users/heise/Documents/janet_web/mysite/media/'+row[0][0]+'/'
+        source = 'media/datas/'
+        destination = 'media/'+row[0][0]+'/'
 
         shutil.move(source+my_file.name,destination+my_file.name)
         # print(my_file)   # 파일명

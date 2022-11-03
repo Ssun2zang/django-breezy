@@ -50,7 +50,7 @@ def do_test(tag):  # tag로 리스트 뽑아옴
 # Create your views here.
 
 def makereport(_document, _list, BRID):
-    document = Document(_document)
+    document = Document(_document) 
     picname = "C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/"+BRID+ '/totalpicture.png'
     document.add_picture(picname,width= Cm(16), height= Cm(9))
 

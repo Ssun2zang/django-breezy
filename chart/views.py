@@ -106,7 +106,7 @@ def makefgraph(acczlist, time):    ###### 시간을 못찾음
 
 def totalgraph(_list1, _list2, BRID):
     from matplotlib import font_manager, rc
-    font_path = "C:/Windows/Fonts/NGULIM.TTF"
+    font_path = "C:/Windows/Fonts/NGULIM.TTF"  # 이거 되나?
     font = font_manager.FontProperties(fname=font_path).get_name()
     rc('font', family=font)
 
@@ -428,7 +428,7 @@ def loading(requset, BRID, year, month, day, year2, month2, day2):
 
 def report(request, BRID):
     all_spots = []
-    f = open('C:/Users/heise/Documents/janet_web/mysite/static/차트만 만드는 폴더/chart/'+BRID+'/spot.txt', 'r')
+    f = open('static/차트만 만드는 폴더/chart/'+BRID+'/spot.txt', 'r')
     for line in f.readlines():
             spot = line.split(' ')
             all_spots.append(spot)
