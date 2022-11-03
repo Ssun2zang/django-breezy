@@ -62,15 +62,15 @@ def upload_home(request, BRID):
 
     conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
             
     curs = conn.cursor(pymysql.cursors.DictCursor)
     
-    sql = """insert into `janetweb`.`session` (`cookie`, `dir`) values (%s, %s)"""
+    sql = """insert into `breezy`.`session` (`cookie`, `dir`) values (%s, %s)"""
 
     curs.execute(sql, (key_value,cookie_dir))
     conn.commit()
@@ -95,9 +95,9 @@ def file_upload_view(request, BRID):
 
         conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
         

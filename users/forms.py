@@ -26,9 +26,9 @@ class loginform(forms.Form):
             try:
                 conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
                 curs = conn.cursor()

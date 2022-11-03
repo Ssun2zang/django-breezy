@@ -30,13 +30,13 @@ def board_data(request):
     return render(request, 'board_data.html')
 
 
-def _board_upload(request, cookie):
+def _board_upload(request, cookie):  # 안 씀
     conn = pymysql.connect(
                 user='root',
                 passwd='pass',
-                host='52.79.181.152',
-                port=59759,
-                db='janetweb'
+                host='localhost',
+                port=3306,
+                db='breezy'
             )
         
     curs = conn.cursor()
@@ -137,9 +137,9 @@ def board_upload(request, cookie, BRID):
     Success = 0
     conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
 
@@ -168,11 +168,11 @@ def board_upload(request, cookie, BRID):
         raise Http404('교량 권한이 없습니다')
     
     conn = pymysql.connect(
-                user='root',
-                passwd='pass',
-                host='52.79.181.152',
-                port=59759,
-                db='janetweb'
+                    user='root',
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
+                    db='breezy'
             )
         
     curs = conn.cursor()

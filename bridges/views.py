@@ -17,9 +17,9 @@ def _board_list(request):
 
     conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='52.79.181.152',
-                    port=59759,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
     
@@ -72,9 +72,9 @@ def board_list(request):
 
     conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
     
@@ -108,9 +108,9 @@ def board_write(request):
 
         conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
         
@@ -142,9 +142,9 @@ def board_write(request):
         else:
             conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
             

@@ -197,11 +197,11 @@ def datedata(request, BRID):
     userform = request.session.get('user')
 
     conn = pymysql.connect(
-                user='root',
-                passwd='pass',
-                host='52.79.181.152',
-                port=59759,
-                db='breezy'
+                    user='root',
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
+                    db='breezy'
             )
 
     curs = conn.cursor(pymysql.cursors.DictCursor)
@@ -219,9 +219,9 @@ def _datedata(request, BRID, year, month, day, year2, month2, day2):
     Success = 0
     conn = pymysql.connect(
                     user='root',
-                    passwd='pass',
-                    host='52.79.181.152',
-                    port=59759,
+                    passwd='0208',
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
 
@@ -402,13 +402,13 @@ def _datedata(request, BRID, year, month, day, year2, month2, day2):
         'year': year, 'day': day, 'month2': month2, 'year2': year2, 'day2': day2, 'list':_list[0], 'acclist':acclist, 'spotlist':spotlist, 'BRID':BRID})
 
 
-def chart_data(request, cookie):
+def chart_data(request, cookie):    # 사용 안 함
     # print(cookie)
     conn = pymysql.connect(
                     user='root',
                     passwd='pass',
-                    host='43.200.68.104',
-                    port=55261,
+                    host='localhost',
+                    port=3306,
                     db='breezy'
                 )
         

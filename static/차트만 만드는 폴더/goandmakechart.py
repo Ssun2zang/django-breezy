@@ -326,9 +326,9 @@ def main():
     while(True):
         conn = pymysql.connect(
                 user='root',
-                passwd='pass',
-                host='52.79.181.152',
-                port=59759,
+                passwd='0208',
+                host='localhost',
+                port=3306,
                 db='breezy'
             )
 
