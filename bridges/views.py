@@ -33,7 +33,6 @@ def _board_list(request):
     auth_bridge = row[0][4]
     if auth_bridge:
         auth_list = auth_bridge.split(',')
-    print(auth_list)
         
     bridge_list = []     
 
@@ -124,7 +123,6 @@ def board_write(request):
         auth_bridge = row[0][4]
         if auth_bridge:
             auth_list = auth_bridge.split(',')
-        print(auth_list)
 
         return render(request, 'bradd.html',{'list':auth_list} )
     elif request.method == 'POST':
