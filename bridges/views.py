@@ -121,6 +121,7 @@ def board_write(request):
         row = curs.fetchall()
 
         auth_bridge = row[0][4]
+        auth_lists = []
         if auth_bridge:
             auth_lists = auth_bridge.split(',')
 
