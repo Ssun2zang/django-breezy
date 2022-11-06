@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pymysql
 from datetime import datetime, timedelta
 import pprint
@@ -41,7 +43,7 @@ def printresult(ifdb, tag):
     return result
     # pprint.pprint(result.raw)
     
-def do_test(tag):  # tag로 리스트 뽑아옴
+def do_test(tag):  # tag -> list
     mydb = get_ifdb(db='sensor')
     # print(mydb.get_list_database())
     _list = printresult(mydb, tag)
@@ -54,8 +56,8 @@ def makereport(_document, _list, BRID):
     picname = "chart/"+BRID+ '/totalpicture.png'
     document.add_picture(picname,width= Cm(16), height= Cm(9))
 
-    table = document.tables[0]  # 표가 1개만 있으니 0번째 표를 대입
-    n_add_rows = len(_list) + 1 - len(table.rows) # 더 만들어야 할 행 개수
+    table = document.tables[0]  
+    n_add_rows = len(_list) + 1 - len(table.rows) 
 
 
     for i in range(n_add_rows):  # 행 추가
@@ -64,12 +66,12 @@ def makereport(_document, _list, BRID):
         for j in range(4):
             table.cell(i+1,j).text = _list[i][j]
             table.rows[i+1].cells[j].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-            # 표에 들어가는 타입은 문자열, 따라서 정수 및 실수는 문자열로 변환
+            
     report_name = "chart/"+BRID+ "/output.docx"
-    document.save(report_name) # 다른 이름으로 저장
+    document.save(report_name) 
 
 
-def makefgraph(acczlist, time, BRID):    ###### 시간을 못찾음
+def makefgraph(acczlist, time, BRID):    
     b = np.array(acczlist)
     b = np.reshape(b, (len(b),1))
     fs=100
@@ -78,18 +80,14 @@ def makefgraph(acczlist, time, BRID):    ###### 시간을 못찾음
     
     Pacc=np.transpose(Pacc)
     
-    print(float(abs(max(Pacc))), "최대값")
-    print(np.where(Pacc == max(Pacc))[0], "최대값 위치")
-    print(time[int(str(np.where(Pacc == max(Pacc))[0])[1:-1])][:19])
     stamp = time[int(str(np.where(Pacc == max(Pacc))[0])[1:-1])][:19]
     new_stamp = stamp.replace('T', '_')
-    print(float(f[np.where(Pacc == max(Pacc))]), "최대값일 때 주파수값")   # sp
 
 
     print(math.sqrt(float(abs(max(Pacc)))))  # spot 1
 
-    spot1 = float(f[np.where(Pacc == max(Pacc))])  # x축
-    spot2 = math.sqrt(float(abs(max(Pacc))))  # y축
+    spot1 = float(f[np.where(Pacc == max(Pacc))])  
+    spot2 = math.sqrt(float(abs(max(Pacc))))  
     
 
     f = open("chart/"+BRID+ '/spot.txt', 'a')
@@ -125,12 +123,12 @@ def totalgraph(_list1, _list2, BRID):
     for i in range(0,len(spots)):
         t = spots[i][0]
         a = float(spots[i][1])
-        # print(a)
-        b = float(spots[i][2][:-1])   # 피크
-        # print(b)
-        _a = round(a, 1)    # 주파수
+
+        b = float(spots[i][2][:-1])   
+
+        _a = round(a, 1)   
         compa = np.where(x == _a)[0]
-        # print(compa)
+
 
         result = "ERR"
         if b >= a3[compa]:
@@ -141,9 +139,6 @@ def totalgraph(_list1, _list2, BRID):
             result = "B"
         else:
             result = "A"
-
-        
-        print(str(a),str(b),"위험 수준 : "+result+"\n")
         if (b <= 0.01):
             b = 0.01
 
