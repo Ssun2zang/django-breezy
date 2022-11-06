@@ -122,9 +122,9 @@ def board_write(request):
 
         auth_bridge = row[0][4]
         if auth_bridge:
-            auth_list = auth_bridge.split(',')
+            auth_lists = auth_bridge.split(',')
 
-        return render(request, 'bradd.html',{'list':auth_list} )
+        return render(request, 'bradd.html',{'list':auth_lists} )
     elif request.method == 'POST':
         # 회원 가입 코드 작성
         brname = request.POST.get('brname', None)
