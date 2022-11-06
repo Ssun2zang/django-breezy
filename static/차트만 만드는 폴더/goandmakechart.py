@@ -29,7 +29,7 @@ def get_ifdb(db, host='localhost', port=8086):
     try:
         client.create_database(db)
         print('Connection Successful')
-        print(f'host :{host}\nport :{port}\n\ndatabase :{db}')
+        # print(f'host :{host}\nport :{port}\n\ndatabase :{db}')
     except:
         print('Connection Failed')
         pass
